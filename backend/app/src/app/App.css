@@ -1,0 +1,78 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.disabled {
+  color: #bdbdbd;
+  pointer-events: none;
+}
+
+.app-chart {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-chart--buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 8px;
+}
+
+.app-chart--buttons  > .btn-group > .btn-outline-primary,
+.app-chart--buttons  > .btn-group > .btn-outline-secondary,
+.app-chart--buttons  > .btn-group > .btn-outline-danger {
+    border: 0;
+}
+
+.app-chart--buttons  > .btn-group > .btn-outline-primary.focus,
+.app-chart--buttons  > .btn-group > .btn-outline-secondary.focus,
+.app-chart--buttons  > .btn-group > .btn-outline-danger.focus {
+  box-shadow: 0 0 0 0 rgb(108 117 125 / 50%);
+}
+
+.app-loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition-duration: 50s;
+  z-index: 99;
+}
+
+.accordion > .card > .card-link {
+  padding: 8px;
+  cursor: pointer;
+  color: black;
+  background-color: #fafafaba;
+  -webkit-box-shadow: 0 ​-2px 10px 0 rgba(0,0,0, 0.10);
+  -moz-box-shadow: 0 -2px 10px 0 rgba(0,0,0, 0.10);
+  box-shadow: 0 -2px 10px 0 rgba(0,0,0, 0.10);
+}
+
+
+.card-title {
+  font-weight: 300;
+}
+
+/* Colors
+orange: rgb(210, 144, 52)
+blue-green: rgb(38, 70, 83)
+azure: rgb(0, 174, 204)
+*/
+
+@media (max-width: 1024px) {
+  .app {
+    position: relative;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,35 @@
+.app-market-strategy-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-market-strategy-header--row > .btn-group > .btn-outline-primary,
+.app-market-strategy-header--row > .btn-group > .btn-outline-secondary,
+.app-market-strategy-header--row > .btn-group > .btn-outline-danger {
+    border: 0;
+}
+
+.app-market-strategy-header--row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-market-strategy-header--row > p{
+    padding-left: 8px;
+}
+
+
+.app-market-strategy-header--row > .green {
+    color: darkgreen;
+}
+
+.app-market-strategy-header--row > .red {
+    color: darkred;
+}
+
+.app-market-strategy-header--published{
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-top: 3px;
+}

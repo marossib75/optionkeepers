@@ -1,0 +1,26 @@
+.app-market-underlying {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-market-underlying-title > h1 {
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 2.5rem;
+}
+
+.app-market-underlying-title > h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1.5rem;
+}
+
+.app-market-underlying-prices{
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

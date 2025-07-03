@@ -1,0 +1,59 @@
+.app-club-page{
+    height: 100%;
+}
+
+.app-club--action-navbar{
+    display: flex;
+    align-items: center;
+}
+
+.app-club-page--leftsidebar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 14px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.app-club-page--rightsidebar{
+    font-size: 14px;
+    margin-top: 1em;
+    height: -moz-calc(100% - 70px); /* Firefox */
+    height: -webkit-calc(100% - 70px); /* Chrome, Safari */
+    height: calc(100% - 70px); /* IE9+ and future browsers */
+}
+
+
+.app-club-page--logo{
+    height: 100px;
+    width: 100px;
+}
+
+.app-club-card--bold{
+    font-weight: 600;
+}
+
+.app-club-page--info{
+    margin-top: 1em;
+    width: 175px;
+}
+
+.app-club-page--links{
+    display: flex;
+    flex-direction: column;
+}
+
+.app-club-page--upvote{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-top: 4px;
+}
+
+
+

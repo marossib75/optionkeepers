@@ -1,0 +1,58 @@
+.app-strategy-page--navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.app-strategy-page--visibility{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-strategy-page--info{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-strategy-page--info-stats{
+    margin-left: 2em;
+}
+
+.app-strategy-page--actions{
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+    align-items: center;   
+}
+
+.app-strategy-page--description-stats {
+    display: flex;
+    font-size: larger;
+    margin-top: 2em;
+}
+
+.app-strategy-page--description-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.app-strategy-page--description-stats-number{
+    margin-bottom: 1em;
+}
+
+
+.app-strategy-page--row-info-chart{
+    margin-right: 1em;
+}
+
+.app-strategy-page--row-tables{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2em;
+}

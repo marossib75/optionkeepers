@@ -1,0 +1,66 @@
+version: '3'
+
+services:
+  finance:
+    container_name: finance
+    build: ./finance/
+    entrypoint: ['sh', '/data/web/finance_setup.sh']
+    volumes:
+      - ./finance:/data/web
+      - finance_static:/assets
+      - financestatus:/finance_status
+    working_dir: /data/web
+    restart: always
+    env_file:
+      - .env
+    ports:
+        - "8000:8000"
+    depends_on:
+      - celeryfinance
+      - financemongodb1
+    
+  financemongodb1:
+    image: mongo:4
+    restart: always
+    container_name: financemongodb1
+    env_file:
+      - .env
+    volumes:
+      - financemongodata1:/data/db
+    expose:
+      - "27017"
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--wiredTigerCacheSizeGB", "0.2"]
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "400k"
+        max-file: "10" 
+
+  financeredis:
+    container_name: "financeredis"
+    image: redis:alpine
+    expose:
+      - "6379"
+    restart: always
+    sysctls:
+      net.core.somaxconn: '4096' 
+        
+  celeryfinance:
+    container_name: "celeryfinance"
+    build: ./finance/
+    command: celery -A finance worker -B -l INFO --concurrency=3 
+    working_dir: /code
+    env_file:
+      - .env
+    volumes:
+      - ./finance:/code
+    depends_on:
+      - financemongodb1
+      - financeredis
+
+
+
+volumes:
+    finance_static:
+    financemongodata1:
+    financestatus:

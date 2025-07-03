@@ -1,0 +1,22 @@
+.app-market-tab {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-market-tab--empty {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.app-market-tab--body {
+    overflow: auto;
+    padding: 8px;
+}
+
+.app-market-tab--empty > h4 {
+    color: #bdbdbd;
+}

@@ -1,0 +1,10 @@
+.app-input.input-group.input-group-sm {
+    flex-wrap: nowrap;
+}
+
+.app-input.input-group.input-group-sm > .react-datepicker-wrapper > .react-datepicker__input-container > input {
+    padding: 5px 8px;
+    border: 1px solid #ced4da;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}

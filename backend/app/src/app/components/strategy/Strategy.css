@@ -1,0 +1,43 @@
+.app-strategy {
+    display: flex;
+    flex-grow: 1;
+    color: black;
+}
+
+.app-strategy-body {
+    overflow: auto;
+}
+
+.app-strategy-list {
+    padding: 8px;
+}
+
+.app-strategy-list--add {
+    display: flex;
+    padding: 8px;
+    justify-content: flex-end;
+}
+
+.app-strategy-list--empty {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.app-strategy-list--empty > h4 {
+    color: #bdbdbd;
+}
+
+.app-strategy-list > .app-strategy-list--col {
+    padding: 8px;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 1024px) {
+    .app-strategy {
+      flex-direction: column;
+    }
+}

@@ -1,0 +1,42 @@
+.app-list-group-item{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.app-list-group-item--visibility{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.app-list-group-item--name-user{
+    overflow: hidden;
+    width: auto;
+}
+
+.app-list-group-item--user{
+    font-size: 12px;
+}
+
+.app-list-group-item--stats{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    font-size: 14px;
+}
+
+.app-list-group-item--profit{
+    align-items: center;
+}
+
+.app-list-group-item--upvotes{
+    margin-left: auto;
+    font-weight: 400;
+}
+
+.app-list-group-item--upvote-icon{
+    margin-bottom: 2px;
+    color: rgb(137, 137, 137);
+}

@@ -1,0 +1,53 @@
+.app-portfolio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 8px;
+}
+
+.app-portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 8px;    
+}
+
+.app-portfolio-body {
+    flex-grow: 5;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-portfolio-strategies {
+    overflow: auto;
+}
+
+.app-portfolio-line {
+    width: 1px;
+    background-color: #e0e0e0
+}
+.app-portfolio-stats {
+    flex-grow: 1;
+    padding: 8px;
+}
+.app-portfolio-stats--info {
+    text-align: left;
+    padding-right: 8px;
+}
+
+.btn-outline-primary,
+.btn-outline-danger {
+    border: 0;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 1200px) {
+    .app-portfolio {
+      flex-direction: column;
+    }
+    .app-portfolio-body {
+        flex-grow: 1;
+    }
+}

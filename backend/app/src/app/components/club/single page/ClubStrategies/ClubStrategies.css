@@ -1,0 +1,52 @@
+.app-club-strategy-search {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    max-width: 18vw;
+    min-width: 18vw;
+    height: 100%;
+}
+
+.app-club-strategy-search--form {
+    padding: 8px;
+}
+
+.app-club-strategy-search--center-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.app-club-strategy-search--add-remove {
+    display: flex;
+    padding: 8px;
+    justify-content: space-around;
+
+}
+
+.app-club-strategy-search--strategies-search{
+    margin-bottom: 2em;
+}
+
+.app-club-strategy-search--result {
+    margin-top: 1em;
+    flex-grow: 1;
+}
+
+.app-club-strategy-list--empty {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10em;
+    padding: 8px;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 1024px) {
+    .app-club-strategy-search {
+        max-width: 100%;
+    }
+}

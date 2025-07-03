@@ -1,0 +1,114 @@
+{% extends "root.html" %}
+{% load static %}
+
+{% block content %}
+<div class="row pt-3">
+	<div class="col-sm-2">
+        <div id="accordion">
+            {% if markets %}
+                <div class="list-group">
+                    {% for market in markets %}
+                            <a class="list-group-item list-group-item-action" id="headingOne" data-toggle="collapse" data-target="#collapse{{ forloop.counter0 }}" aria-expanded="false" aria-controls="collapseOne">
+                                <p class="mb-1">{{ market.label }}</p>
+                                <small>{{ market.exchange }} - {{ market.symbol }}</small>
+                            </a>
+
+                            <div id="collapse{{ forloop.counter0 }}" class="collapse {% if market.symbol == marketSymbol %} show {% endif %} list-group" aria-labelledby="headingOne" data-parent="#accordion">
+                                {% if market.submarkets %}
+                                    {% for submarket in market.submarkets %}
+                                        <a href="/options/{{ market.symbol }}/{{ submarket.symbol }}/0" class="list-group-item list-group-item-light list-group-item-action {% if market.symbol == marketSymbol and submarket.symbol == submarketSymbol %} active {% endif %}"><small>{{ submarket.label }}</small></a>
+                                    {% endfor %}
+
+                                {% else %}
+                                    <li class="list-group-item list-group-item-light">No options are available.</li>
+                                {% endif %}
+                            </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <ul class="list-group">
+                    <li class="list-group-item">No options are available.</li>
+                </ul>
+            {% endif %}
+            
+        </div>
+    </div>
+    <div class="col-sm-10">
+        <nav class="navbar navbar-light bg-light">
+            <a>
+                <p class="mb-1">{{ title }}</p>
+                <span class="navbar-brand mb-1 h2">{{ subtitle }} - {{ expiration.date|date:"b d Y"|capfirst }}</span>
+            </a>
+            <div class="dropleft">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Exipration Date
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                {% if expirations %}
+                    {% for exp in expirations %}
+                        <a class="dropdown-item" href="/options/{{ marketSymbol }}/{{ submarketSymbol }}/{{ forloop.counter0 }}">{{ exp.date|date:"b d Y"|capfirst }}</a>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+        </nav>
+        <div class="table-responsive">
+            <table class="table text-center table-bordered table-hover table-striped table-sm">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" colspan="6">Pull</th>
+                        <th scope="col" >Strike</th>
+                        <th scope="col" colspan="6">Call</th>
+                    </tr>
+                    <tr class="sortable">
+                        <th scope="col">Bid Price</th>
+                        <th scope="col">Ask Price</th>
+                        <th scope="col">Volume</th>
+                        <th scope="col">Open Interest</th>
+                        <th scope="col">Last Price</th>
+                        <th scope="col">Settle Price</th>
+                        <th scope="col"></th>
+                        <th scope="col">Settle Price</th>
+                        <th scope="col">Last Price</th>
+                        <th scope="col">Open Interest</th>
+                        <th scope="col">Volume</th>
+                        <th scope="col">Ask Price</th>
+                        <th scope="col">Bid Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% if options %}
+                    {% for option in options %}
+                        <tr>
+                            <td>{{ option.put.bid|default_if_none:"n.a." }}</td>
+                            <td>{{ option.put.ask|default_if_none:"n.a." }}</td>
+                            <td>{{ option.put.volume|default_if_none:"n.a." }}</td>
+                            <td>{{ option.put.openInterest|default_if_none:"n.a." }}</td>
+                            <td>{{ option.put.last|default_if_none:"n.a." }}</td>
+                            <td>{{ option.put.settle|default_if_none:"n.a." }}</td>
+                            <td><b>{{ option.strike|default_if_none:"n.a." }}</b></td>
+                            <td>{{ option.call.settle|default_if_none:"n.a." }}</td>
+                            <td>{{ option.call.last|default_if_none:"n.a." }}</td>
+                            <td>{{ option.call.openInterest|default_if_none:"n.a." }}</td>
+                            <td>{{ option.call.volume|default_if_none:"n.a." }}</td>
+                            <td>{{ option.call.ask|default_if_none:"n.a." }}</td>
+                            <td>{{ option.call.bid|default_if_none:"n.a." }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="13">No chains available</td>
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>	
+	
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+

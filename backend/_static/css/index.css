@@ -1,0 +1,100 @@
+.index  {
+    display: flex;
+    padding: 16px;
+    flex-grow: 1;
+}
+
+.index-header {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    -webkit-box-shadow: 0 -2px 10px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 -2px 10px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 -2px 10px 0 rgba(0,0,0,0.75);
+    z-index: 99;
+}
+
+.index-header-element a {
+   font-size: 2rem;
+}
+
+.index-form {
+    padding: 16px 32px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-form-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.index-welcome {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.index-welcome-text {
+    padding: 16px 32px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-welcome-divider {
+    width: 2px;
+}
+
+.index-welcome h1 {
+    font-size: 3rem;
+    text-align: right;
+}
+
+.index-welcome h2 {
+    font-size: 2rem;
+    text-align: right;
+}
+
+.index-welcome p {
+    font-size: 2rem;
+    text-align: right;
+}
+
+.index-body {
+    padding: 16px 32px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.index-body-welcome {
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-body-welcome h3 {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.index-body-welcome snap {
+    font-size: 25px;
+    text-align: left;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .index {
+      flex-direction: column;
+    }
+}

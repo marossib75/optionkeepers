@@ -1,0 +1,11 @@
+.form-row.buttons-right{
+    justify-content: flex-end;
+}
+
+.form-row.buttons-between{
+    justify-content: space-between
+}
+
+.modal-body > form > .form-row > .btn {
+    margin-right: 8px;
+}

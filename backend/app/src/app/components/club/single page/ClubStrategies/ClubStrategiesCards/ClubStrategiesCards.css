@@ -1,0 +1,38 @@
+.app-club-strategy {
+    display: flex;
+    flex-grow: 1;
+    color: black;
+    overflow: hidden;
+}
+
+.app-club-strategy-body {
+    overflow: auto;
+}
+
+.app-club-strategy-list {
+    padding: 8px;
+}
+
+.app-club-strategy-list--empty {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.app-club-strategy-list--empty > h4 {
+    color: #bdbdbd;
+}
+
+.app-club-strategy-list > .app-club-strategy-list--col {
+    padding: 8px;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 1024px) {
+    .app-club-strategy {
+      max-width: 100%;
+    }
+}

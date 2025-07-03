@@ -1,0 +1,17 @@
+.app-navigator {
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    top: 80px;
+    bottom: 50px;
+    min-width: 100vw;
+}
+
+
+@media (max-width: 1024px) {
+    .app-navigator {
+        position: relative;
+        top: 0px;
+        bottom: 0px;
+    }
+}

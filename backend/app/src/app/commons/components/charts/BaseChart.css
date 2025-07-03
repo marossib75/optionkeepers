@@ -1,0 +1,32 @@
+.app-charts--empty {
+    text-align: center;
+    padding: 64px;
+}
+
+.app-chart-header {
+    display: flex;
+    justify-content: space-between;
+}
+.app-chart-header--title {
+    text-align: center;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.app-chart-header--control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.react-stockcharts-zoom-button > rect {
+    fill: transparent;
+}
+
+.react-stockcharts-zoom-button > path {
+    stroke-width: 1;
+}
+
+.react-stockcharts-zoom-button > g > path {
+    stroke-width: 1;
+}

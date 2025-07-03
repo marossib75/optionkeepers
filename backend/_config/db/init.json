@@ -1,0 +1,446 @@
+{
+    "exchanges": [
+        {
+            "symbol": "CBOE",
+            "name": "Chicago Board Options Exchange",
+            "days": [1,2,3,4,5],
+            "hours": [[8,14]]
+        },
+        {
+            "symbol": "CME",
+            "name": "Chicago Mercantile Exchange",
+            "days": [1,2,3,4,5],
+            "hours": [[16,18]]
+        },
+        {
+            "symbol": "EUREX",
+            "name": "Eurex Exchange",
+            "days": [1,2,3,4,5],
+            "hours": [[9,19]]
+        }
+    ],
+    "groups": [
+        {
+            "symbol": "AAPL",
+            "name": "Apple Inc.",
+            "currency": "USD",
+            "type": "stock"
+        },
+        {
+            "symbol": "MSFT",
+            "name": "Microsoft Corp.",
+            "currency": "USD",
+            "type": "stock"
+        },
+        {
+            "symbol": "TSLA",
+            "name": "Tesla Inc.",
+            "currency": "USD",
+            "type": "stock"
+        },
+        {
+            "symbol": "GOOG",
+            "name": "Google Inc.",
+            "currency": "USD",
+            "type": "stock"
+        },
+        {
+            "symbol": "AMZN",
+            "name": "Amazon",
+            "currency": "USD",
+            "type": "stock"
+        },
+        {
+            "symbol": "FB",
+            "name": "Facebook Inc.",
+            "currency": "USD",
+            "type": "stock"
+        },
+        {
+            "symbol": "INTC",
+            "name": "Intel Corp.",
+            "currency": "USD",
+            "type": "stock"
+        },
+        {
+            "type": "index",
+            "name": "S&P 500",
+            "symbol": "^GSPC",
+            "currency": "USD"
+        },
+        {
+            "type": "index",
+            "name": "S&P 500 VIX",
+            "symbol": "^VIX",
+            "currency": "USD"
+        },
+        {
+            "type": "index",
+            "name": "Russell 2000",
+            "symbol": "^RUT",
+            "currency": "USD"
+        },
+        {
+            "type": "index",
+            "name": "Nasdaq 100",
+            "symbol": "^NDX",
+            "currency": "USD"
+        },
+        {
+            "type": "index",
+            "name": "DAX",
+            "symbol": "^GDAXI",
+            "currency": "EUR"
+        },
+        {
+            "type": "index",
+            "name": "Euro Stoxx 50",
+            "symbol": "^STOXX50E",
+            "currency": "EUR"
+        },
+        {
+            "type": "commodity future",
+            "name": "Gold Futures",
+            "symbol": "GC=F",
+            "currency": "USD"
+        },
+        {
+            "type": "commodity future",
+            "name": "Crude Oil",
+            "symbol": "CL=F",
+            "currency": "USD"
+        },
+        {
+            "type": "index future",
+            "name": "VSTOXX Mini Futures",
+            "symbol": "FVSTOXX",
+            "currency": "EUR"
+        },
+        {
+            "type": "bond",
+            "name": "Euro Bund",
+            "symbol": "EUB",
+            "currency": "EUR"
+        }
+    ],
+    "markets": [
+        {
+            "id": "AAPL",
+            "groupId": "AAPL",
+            "outsourceId": "AAPL",
+            "symbol": "AAPL",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "Apple Inc.",
+            "currency": "USD",
+            "template": "stock",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "MSFT",
+            "groupId": "MSFT",
+            "outsourceId": "MSFT",
+            "symbol": "MSFT",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "Microsoft Corp.",
+            "currency": "USD",
+            "template": "stock",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "TSLA",
+            "groupId": "TSLA",
+            "outsourceId": "TSLA",
+            "symbol": "TSLA",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "Tesla Inc.",
+            "currency": "USD",
+            "template": "stock",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "GOOG",
+            "groupId": "GOOG",
+            "outsourceId": "GOOG",
+            "symbol": "GOOG",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "Google Inc.",
+            "currency": "USD",
+            "template": "stock",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "AMZN",
+            "groupId": "AMZN",
+            "outsourceId": "AMZN",
+            "symbol": "AMZN",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "Amazon",
+            "currency": "USD",
+            "template": "stock",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "FB",
+            "groupId": "FB",
+            "outsourceId": "FB",
+            "symbol": "FB",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "Facebook Inc.",
+            "currency": "USD",
+            "template": "stock",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "INTC",
+            "groupId": "INTC",
+            "outsourceId": "INTC",
+            "symbol": "INTC",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "Intel Corp.",
+            "currency": "USD",
+            "template": "stock",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "_SPX",
+            "groupId": "^GSPC",
+            "outsourceId": "^GSPC",
+            "symbol": "SPX",
+            "exchange": "CBOE",
+            "country": "United States",
+            "label": "S&P 500",
+            "currency": "USD",
+            "template": "index",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "_VIX",
+            "groupId": "^VIX", 
+            "outsourceId": "^VIX",
+            "symbol": "VIX",
+            "exchange": "CBOE",
+            "label": "S&P 500 Volatility Index",
+            "country": "United States",
+            "currency": "USD",
+            "template": "index",
+            "exposition": 100,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "133",
+            "chainsId": "133",
+            "futuresId": "133",
+            "groupId": "^GSPC",
+            "outsourceId": "ES=F",
+            "symbol": "ES",
+            "exchange": "CME",
+            "label": "E-mini S&P 500 Futures",
+            "country": "United States",
+            "currency": "USD",
+            "template": "index future",
+            "exposition": 50,
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "8667",
+            "chainsId": "8667",
+            "futuresId": "8667",
+            "groupId": "^GSPC",
+            "outsourceId": "MES=F",
+            "symbol": "MES",
+            "exchange": "CME",
+            "label": "Micro E-mini S&P 500 Index",
+            "country": "United States",
+            "currency": "USD",
+            "template": "index future",
+            "exposition": 5,
+            "dividendYield": 0,
+            "proportion":0.1
+        },
+        {
+            "id": "8314",
+            "chainsId": "8314",
+            "futuresId": "8314",
+            "groupId": "^RTY",
+            "outsourceId": "RTY=F",
+            "symbol": "RTY",
+            "exchange": "CME",
+            "label": "E-mini Russell 2000 Index",
+            "country": "United States",
+            "currency": "USD",
+            "template": "index future",
+            "exposition": 50,
+            "dividendYield": 0,
+            "proportion": 1
+        },
+        {
+            "id": "8669",
+            "chainsId": null,
+            "futuresId": "8669",
+            "groupId": "^RTY",
+            "outsourceId": "M2K=F",
+            "symbol": "M2K",
+            "exchange": "CME",
+            "country": "United States",
+            "currency": "USD",
+            "template": "index future",
+            "exposition": 5,
+            "label": "Micro E-mini Russell 2000 Index",
+            "dividendYield": 0,
+            "proportion":0.1
+        },
+        {
+            "id": "146",
+            "chainsId": "146",
+            "futuresId": "146",
+            "groupId": "^NDX",
+            "outsourceId": "NQ=F",
+            "symbol": "NQ",
+            "exchange": "CME", 
+            "country": "United States",
+            "currency": "USD",
+            "template": "index future",
+            "exposition": 20,
+            "label": "E-mini Nasdaq-100",
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "8668",
+            "chainsId": "8668",
+            "futuresId": "8668",
+            "groupId": "^NDX",
+            "outsourceId": "MNQ=F",
+            "symbol": "MNQ",
+            "exchange": "CME",
+            "country": "United States",
+            "currency": "USD",
+            "template": "index future",
+            "exposition": 2,
+            "label": "Micro E-mini Nasdaq-100 Index",
+            "dividendYield": 0,
+            "proportion":0.1
+        },
+        {
+            "id": "437",
+            "chainsId": "437",
+            "futuresId": "437",
+            "groupId": "GC=F",
+            "outsourceId": "GC=F",
+            "symbol": "GC",
+            "exchange": "CME", 
+            "country": "United States",
+            "currency": "USD",
+            "template": "commodity future",
+            "exposition": 50,
+            "label": "Gold",
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {   
+            "id": "425",
+            "chainsId": "425",
+            "futuresId": "425",
+            "groupId": "CL=F",
+            "outsourceId": "CL=F",
+            "symbol": "CL",
+            "exchange": "CME", 
+            "country": "United States",
+            "currency": "USD",
+            "template": "commodity future",
+            "exposition": 50,
+            "label": "Crude Oil",
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "^GDAXI",
+            "chainsId": "DE0008469495",
+            "futuresId": "DE0008469594",
+            "groupId": "^GDAXI",
+            "outsourceId": "^GDAXI",
+            "symbol": "DAX",
+            "exchange": "EUREX", 
+            "country": "Germany",
+            "currency": "EUR",
+            "template": "index",
+            "exposition": 5,
+            "label": "DAX",
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "^STOXX50E",
+            "chainsId": "DE0009652396",
+            "futuresId": "DE0009652388",
+            "groupId": "^STOXX50E",
+            "outsourceId": "^STOXX50E",
+            "symbol": "STX",
+            "exchange": "EUREX", 
+            "country": "Germany",
+            "currency": "EUR",
+            "template": "index",
+            "exposition": 50,
+            "label": "Euro Stoxx 50",
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "DE000A0Z3CW9",
+            "chainsId": "DE000A2BM405",
+            "futuresId": "DE000A0Z3CW9",
+            "groupId": "FVSTOXX",
+            "outsourceId": null,
+            "symbol": "VS2",
+            "exchange": "EUREX",
+            "country": "Europe",
+            "currency": "EUR",
+            "template": "index future",
+            "exposition": 100,
+            "label": "VSTOXX Mini Futures",
+            "dividendYield": 0,
+            "proportion":1
+        },
+        {
+            "id": "DE0009652644",
+            "chainsId": "DE0009652685",
+            "futuresId": "DE0009652644",
+            "groupId": "EUB",
+            "outsourceId": null,
+            "symbol": "GBL",
+            "exchange": "EUREX", 
+            "country": "Europe",
+            "currency": "EUR",
+            "template": "bonds future",
+            "exposition": 1000,
+            "label": "Gbl bund 10y",
+            "dividendYield": 0,
+            "proportion":1
+        }
+    ]
+}

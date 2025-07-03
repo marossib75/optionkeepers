@@ -1,0 +1,24 @@
+.app-market-strategy-positions {
+    display: flex;
+    margin-top: 4px;
+    flex-direction: column;
+}
+
+.app-market-strategy-positions--control {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8px;
+}
+
+.app-market-strategy-positions--control-input {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 50vw;
+}
+
+.app-market-strategy-positions--control-submit {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}

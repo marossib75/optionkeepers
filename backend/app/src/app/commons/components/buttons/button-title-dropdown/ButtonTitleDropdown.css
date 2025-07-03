@@ -1,0 +1,11 @@
+.app-button-title-dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-button-title-dropdown--title {
+    font-size: 1.5rem;
+    padding: 8px;
+    cursor: pointer;
+}

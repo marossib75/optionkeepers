@@ -1,0 +1,9 @@
+.app-share-modal--searchbar{
+    margin: 2em 1em
+}
+
+.app-share-modal--button{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}

@@ -1,0 +1,74 @@
+.app-button-icon--checked,
+.app-button-icon--disabled,
+.app-button-icon {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    max-height: 100vh;
+    min-height: 40px;
+    padding: 4px;
+}
+
+.app-button-icon--disabled.light,
+.app-button-icon.light {
+    color: rgba(255,255,255, 0.65);
+}
+.app-button-icon--disabled.dark,
+.app-button-icon.dark {
+    color: rgba(61, 61, 61, 0.65);
+}
+
+.app-button-icon.light.border {
+    border: 1px solid rgba(255,255,255, 0.65);
+}
+.app-button-icon.dark.border {
+    border: 1px solid rgba(61, 61, 61, 0.65);
+}
+
+.app-button-icon--checked.light,
+.app-button-icon.light:hover {
+    color: rgba(255,255,255, 0.95);
+}
+.app-button-icon--checked.dark,
+.app-button-icon.dark:hover {
+    color: rgba(61, 61, 61, 0.95);
+}
+
+.app-button-icon--checked.light.border,
+.app-button-icon.light.border:hover {
+    color: rgba(255,255,255, 0.95);
+    border: 1px solid rgba(255,255,255, 0.95);
+}
+
+.app-button-icon--checked.dark.border,
+.app-button-icon.dark.border:hover {
+    color: rgba(61, 61, 61, 0.95);
+    border: 1px solid rgba(61, 61, 61, 0.95);
+}
+
+.app-button-icon--checked,
+.app-button-icon {
+    cursor: pointer;
+}
+
+.app-button-icon--label {
+    display: flex;
+    padding: 4px;
+    align-items: center;
+}
+.app-button-icon--icon {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.app-button-icon--disabled {
+    cursor: not-allowed !important;
+}
+
+.app-button-icon--disabled > .app-button-icon--icon {
+    cursor: not-allowed !important;
+}

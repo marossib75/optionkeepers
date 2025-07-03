@@ -1,0 +1,16 @@
+.app-clubs-navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.app-clubs-navbar--sort{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.app-clubs-navbar--sort-icon{
+    border-radius: 20%;
+    background-color: 'grey';
+}

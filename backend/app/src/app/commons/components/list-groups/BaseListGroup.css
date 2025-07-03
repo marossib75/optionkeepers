@@ -1,0 +1,19 @@
+.app-list-group--items > ul > li {
+    cursor: pointer;
+}
+
+.app-list-group--item-selected {
+   font-weight: 700;
+   background-color: rgba(209, 209, 209, 0.344);
+}
+
+.app-list-group--items > ul > li.disabled {
+    color: #999999;
+  }
+.app-list-group--items > ul > li.disabled:hover,
+.app-list-group--items > ul > li.disabled:focus {
+    color: #999999;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed;
+  }

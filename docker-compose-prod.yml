@@ -1,0 +1,128 @@
+version: '3'
+
+services:
+  finance:
+    container_name: finance
+    build: ./finance/
+    entrypoint: ['sh', '/data/web/finance_setup.sh']
+    volumes:
+      - ./finance:/data/web
+      - finance_static:/assets
+      - financestatus:/finance_status
+    working_dir: /data/web
+    restart: always
+    expose:
+      - "8000"
+    env_file:
+      - .env
+    environment:
+      - PRODUCTION=True
+      - HOST=finance.flowygo.com
+    depends_on:
+      - celeryfinance
+      - financemongodb1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "400k"
+        max-file: "10" 
+    
+
+  financemongodb1:
+    image: mongo:4
+    restart: always
+    container_name: financemongodb1
+    env_file:
+      - .env
+    volumes:
+      - financemongodata1:/data/db
+    expose:
+      - "27017"
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--wiredTigerCacheSizeGB", "0.2"]
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "400k"
+        max-file: "10" 
+
+  financeredis:
+    container_name: "financeredis"
+    image: redis:alpine
+    expose:
+      - "6379"
+    restart: always
+    sysctls:
+      net.core.somaxconn: '4096' 
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "400k"
+        max-file: "10" 
+        
+  celeryfinance:
+    container_name: "celeryfinance"
+    build: ./finance/
+    command: celery -A finance worker -B -l INFO --concurrency=3
+    working_dir: /code
+    env_file:
+      - .env
+    volumes:
+      - ./finance:/code
+    depends_on:
+      - financemongodb1
+      - financeredis
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "400k"
+        max-file: "10" 
+
+  financenginx:
+    image: nginx
+    #build: ./nginx-pagespeed/
+    restart: unless-stopped
+    container_name: financenginx
+    expose:
+        - "80"
+        - "443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf:/etc/nginx/app/conf_app/
+      - finance_static:/assets
+      - ./finance/_static:/static
+      - ./nginx/certificate:/ssl
+    
+    environment:
+        - MAKE_J=4
+        - NGINX_VERSION=1.21.6
+        - PAGESPEED_VERSION=1.14.36.1
+        - LIBPNG_VERSION=1.6.37
+        - NGINX_INCLUDE_PATH=/etc/nginx/app/conf_app/*.conf
+        - NGINX_DEFAULT_SERVER=off
+        - NGINX_FASTCGI_GEOIP=off
+        - NGINX_PAGESPEED=off
+        - NGINX_PAGESPEED_IMG=off
+        - NGINX_PAGESPEED_JS=off
+        - NGINX_PAGESPEED_CSS=off
+        - NGINX_PAGESPEED_STORAGE=file
+        - VIRTUAL_HOST=finance.flowygo.com
+        - VIRTUAL_PROTO=https
+        - VIRTUAL_PORT=443
+    depends_on:
+      - finance
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "400k"
+        max-file: "10" 
+
+
+volumes:
+    finance_static:
+    financemongodata1:
+    financestatus:
+
+networks:
+  default: 
+    external:
+      name: ngix-proxy_default

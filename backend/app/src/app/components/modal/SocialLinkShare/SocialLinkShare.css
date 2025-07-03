@@ -1,0 +1,28 @@
+.app-share-modal--social-column{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.app-share-modal--icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    background-color: grey;
+    border-radius: 50%;
+    color: white;
+}
+
+.app-share-modal--social-icon{
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.app-share-modal--social-icon:hover:not(:active) {
+    opacity: 0.75;
+}

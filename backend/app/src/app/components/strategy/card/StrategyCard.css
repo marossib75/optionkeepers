@@ -1,0 +1,81 @@
+.app-strategy-card.card {
+    -webkit-box-shadow: 0 ​0 5px 0 rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0 0 5px 0 rgba(0,0,0, 0.10);
+    box-shadow: 0 0 5px 0 rgba(0,0,0, 0.10);
+}
+
+.app-strategy-card.card> ._loading_overlay_wrapper > .card-body {
+    padding: 8px;
+}
+
+.app-strategy-card--actions {
+    margin: 0 8px 0 8px;
+    display: flex;
+    flex-direction: row;
+}
+.app-strategy-card--move {
+    display: flex;
+    flex-direction: row;
+}
+.app-strategy-card--controls {
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.app-strategy-card--position-controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.app-strategy-card--buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-strategy-card--header {
+    display: flex;
+    justify-content: space-between;
+}
+.app-strategy-card--info {
+    padding-left: 8px;
+}
+
+.app-strategy-card--stats {
+    padding-right: 8px;
+}
+
+.app-strategy-card--stats > p,
+.app-strategy-card--info > p {
+    margin-bottom: 4px;
+}
+
+.app-strategy-card--stats > .green {
+    color: darkgreen;
+}
+
+.app-strategy-card--stats > .red {
+    color: darkred;
+}
+
+.app-strategy-card--interactions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
+}
+
+.app-strategy-card--interaction-button{
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    margin-left: 8px;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/* @media (max-width: 1286px) {
+    .app-strategy-card.card > .card-body {
+        padding: 12px 0;
+    }
+} */

@@ -1,0 +1,24 @@
+.app-accordion--loader {
+    text-align: center;
+}
+
+.accordion {
+    margin-top: 8px;
+}
+
+.accordion > .card {
+    border: 0;
+}
+
+.accordion> .card> .card-header {
+    cursor: pointer;
+    border-bottom: 0px;
+}
+.accordion> .card > .collapsing > .card-body,
+.accordion> .card > .collapse > .card-body {
+    padding: 0;
+}
+
+._loading_overlay_overlay {
+    background: #ffffff99;
+}

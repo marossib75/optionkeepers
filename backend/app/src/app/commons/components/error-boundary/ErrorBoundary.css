@@ -1,0 +1,13 @@
+.error-boundary {
+    display: flex;
+    justify-content: center;
+    color: #dc3545;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.error-boundary > h4 {
+    font-weight: 300;
+    line-height: 1.2;
+}

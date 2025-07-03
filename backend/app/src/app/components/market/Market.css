@@ -1,0 +1,12 @@
+.app-market {
+    display: flex;
+    flex-grow: 1;
+    color: black;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 1024px) {
+    .app-market {
+      flex-direction: column;
+    }
+}
